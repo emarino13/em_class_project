@@ -6,13 +6,6 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-User.create! do |user|
-  user.full_name = 'Elaine Marino'
-  user.email = 'elaine.c.marino@gmail.com'
-  user.password = 'boulder'
-  user.password_confirmation = 'boulder'
-end
-
 
 Album.create!(name: 'Liscensed to Ill', year: 1986)
 Album.create!(name: 'Paul\'s Boutique', year: 1989)

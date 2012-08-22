@@ -1,6 +1,13 @@
 EmClassProject::Application.routes.draw do
   root(:to => 'homepage#index')
 
+  resources :albums
+  resources :rpses
+
+  match '/source/fortune.rb' => 'source#fortune', :as => 'fortune_source'
+  match '/source/beastie_boys.rb' => 'source#beastie_boys', :as =>'beastie_boys_source'
+  match '/source/rock_paper_scissors.rb' => 'source#rps', :as =>'rps_source'
+  match '/source/converter.rb' => 'source#converter', :as => 'converter_source'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -26,6 +33,7 @@ EmClassProject::Application.routes.draw do
   #       get 'sold'
   #     end
   #   end
+
 
   # Sample resource route with sub-resources:
   #   resources :products do

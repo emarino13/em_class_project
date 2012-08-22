@@ -1,0 +1,19 @@
+<h1> Welcome to Lunch Trails </h1>
+<h2> Your home for finding the best moving lunch! </h2>
+
+<form action ="/search" method="post">
+  <label >Enter your current location:</label>
+  <input type="text" name="location"/>
+
+  <label> Radius from your location:</label>
+<SELECT name ="Radius">
+  <OPTION value="2 miles"> 2 miles </OPTION>
+  <OPTION value="5 miles"> 5 miles </OPTION>
+  <OPTION value="10 miles"> 10 miles </OPTION>
+</SELECT>
+<input type ="submit" name ="submit" value="Search"/>
+</form>
+
+<p><b> Your current location:</b> <%= params[:location] %></p>
+<p><b>Latitude:</b> <%=@latitude%></p>
+<p><b>Longitude:</b> <%=@longitude%></p>
