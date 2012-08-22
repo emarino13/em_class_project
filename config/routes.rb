@@ -3,12 +3,14 @@ EmClassProject::Application.routes.draw do
 
   resources :albums
   resources :rpses
+  resources :converters
   resources :lunchtrucks
 
   match '/source/fortune.rb' => 'source#fortune', :as => 'fortune_source'
   match '/source/beastie_boys.rb' => 'source#beastie_boys', :as =>'beastie_boys_source'
   match '/source/rock_paper_scissors.rb' => 'source#rps', :as =>'rps_source'
   match '/source/converter.rb' => 'source#converter', :as => 'converter_source'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
