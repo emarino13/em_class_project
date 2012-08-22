@@ -3,6 +3,7 @@ EmClassProject::Application.routes.draw do
 
   resources :albums
   resources :rpses
+  resources :lunchtrucks
 
   match '/source/fortune.rb' => 'source#fortune', :as => 'fortune_source'
   match '/source/beastie_boys.rb' => 'source#beastie_boys', :as =>'beastie_boys_source'

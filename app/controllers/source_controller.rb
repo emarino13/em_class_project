@@ -23,9 +23,5 @@ class SourceController < ApplicationController
 
   end
 
-  def lunchtrucks
-
-  end
-
 end
 

@@ -47,11 +47,11 @@
           <a class="brand" href= "/">Elaine's Class Project</a>
           <div class="container nav-collapse">
             <ul class="nav">
-              <li><%= link_to "Fortune", "/path1"  %></li>
-              <li><%= link_to "Rock Paper Scissors", "/path2"  %></li>
+              <li><%= link_to "Fortune", fortune_source_path  %></li>
+              <li><%= link_to "Rock Paper Scissors", rpses_path  %></li>
               <li><%= link_to "Beastie Boys", albums_path %></li>
               <li><%= link_to "Converter", "/path4"  %></li>
-              <li><%= link_to "Lunch Trails", "/path5"  %></li>
+              <li><%= link_to "Lunch Trails", lunchtrucks_path  %></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -68,19 +68,18 @@
               <div class="well sidebar-nav">
                 <h3>RUBY CODE</h3>
                 <ul class="nav nav-list">
-                  <li class="nav-header">XXXX</li>
                   <li><%= link_to "Fortune", fortune_source_path  %></li>
                   <li><%= link_to "Beastie Boys", beastie_boys_source_path  %></li>
                   <li><%= link_to "Rock Paper Scissors", rps_source_path  %></li>
                   <li><%= link_to "Converter", converter_source_path  %></li>
-
                 </ul>
                 <h3>RAILS CODE</h3>
                 <ul class="nav nav-list">
-                  <li class="nav-header">XXXX</li>
                   <li><%= link_to "Fortune", fortune_source_path  %></li>
                   <li><%= link_to "Beastie Boys", albums_path  %></li>
                   <li><%= link_to "Rock Paper Scissors", rpses_path  %></li>
+                  <li><%= link_to "Converter", converter_source_path %></li>
+                  <li><%= link_to "Lunch Trails", lunchtrucks_path  %></li>
                 </ul>
               </div><!--/.well -->
             </div><!--/span-->
