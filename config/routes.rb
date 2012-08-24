@@ -6,6 +6,8 @@ EmClassProject::Application.routes.draw do
 
   resources :albums
   resources :rpses
+
+  get 'converter/celsius' => 'converter#celsius', :as => 'celsius'
   resources :converters
   resources :lunchtrucks
 
@@ -13,10 +15,10 @@ EmClassProject::Application.routes.draw do
   get '/what_i_learned' => 'homepage#what_i_learned', :as => 'what_i_learned_explanation'
 
   # routes to soure code
-  match '/source/fortune.rb' => 'source#fortune', :as => 'fortune_source'
-  match '/source/beastie_boys.rb' => 'source#beastie_boys', :as =>'beastie_boys_source'
-  match '/source/rock_paper_scissors.rb' => 'source#rps', :as =>'rps_source'
-  match '/source/converter.rb' => 'source#converter', :as => 'converter_source'
+  get '/source/fortune.rb' => 'source#fortune', :as => 'fortune_source'
+  get '/source/beastie_boys.rb' => 'source#beastie_boys', :as =>'beastie_boys_source'
+  get '/source/rock_paper_scissors.rb' => 'source#rps', :as =>'rps_source'
+  get '/source/converter.rb' => 'source#converter', :as => 'converter_source'
 
 
 
