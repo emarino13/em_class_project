@@ -8,12 +8,20 @@ EmClassProject::Application.routes.draw do
   resources :rpses
 
   get 'converters/celsius' => 'converters#celsius', :as => 'celsius'
+  get 'converters/fahrenheit' => 'converters#fahrenheit', :as => 'fahrenheit'
 
   resources :converters
   resources :lunchtrucks
 
+  get 'fortunes/fortune_code' => 'fortunes#fortune_code', :as => 'fortune_code'
+
+  resources :fortunes
+
   #routes to explanations
-  get '/what_i_learned' => 'homepage#what_i_learned', :as => 'what_i_learned_explanation'
+  get 'homepage/davinci_coders' => 'homepage#davinci_coders', :as => 'davinci_coders'
+  get 'homepage/what_i_learned' => 'homepage#what_i_learned', :as => 'what_i_learned'
+  get 'homepage/special_thanks' => 'homepage#special_thanks', :as => 'special_thanks'
+  get 'homepage/about_me' => 'homepage#about_me', :as => 'about_me'
 
   # routes to soure code
   get '/source/fortune.rb' => 'source#fortune', :as => 'fortune_source'

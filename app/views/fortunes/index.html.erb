@@ -1,0 +1,11 @@
+<h2> Would you like to know your fortune today? </h2>
+
+<form action = <%= fortune_code_path %> method="get"/>
+<input type="submit" name="submit" value="Get Fortune"/>
+<p><%= @output %></p>
+
+<span class="image">
+  <%= image_tag "fortune_teller.png" %>
+</span>
+
+

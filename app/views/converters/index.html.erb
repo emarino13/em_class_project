@@ -2,18 +2,36 @@
 
 <html>
   <body>
+    <h2>Converting Temperatures Made Easy</h2>
 
+    <span class="image">
+      <%= image_tag "celsius.jpg" %>
+      <%= image_tag "fahrenheit.jpg" %>
+  </span>
     <form action= <%= celsius_path %> method="get">
-      <h2>Converting Temperatures Made Easy</h2>
-
-      <SELECT name="celsius">
+      <SELECT name="temp">
         <OPTION value="celsius">celsius</OPTION>
-        <OPTION value="fahrenheit">fahrenheit</OPTION>
       </SELECT>
 
-      <input type="integer" name="farhenheit"/>
+      <input type="text" name="celsius"/>
       <input type="submit" name="submit" value="Convert!"/>
 
-    </form>
+      <% if params[:celsius].present? then %>
+        <p> <%= @conversion %> degrees fahrenheit.</p>
+      <% end %>
+
+      <form action= <%= fahrenheit_path %> method="get">
+        <SELECT name="temp">
+          <OPTION value="fahrenheit">fahrenheit</OPTION>
+        </SELECT>
+
+        <input type="text" name="fahrenheit"/>
+        <input type="submit" name="submit" value="Convert!"/>
+
+        <% if params[:fahrenheit].present? then %>
+          <p> <%= @degrees %> degrees celsius.</p>
+        <% end %>
+
+      </form>
   </body>
 </html>
