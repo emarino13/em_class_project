@@ -4,7 +4,7 @@ class HomepageController < ApplicationController
 
   end
 
-  def fortune
-  	
+  def what_i_learned
+
   end
 end

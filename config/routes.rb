@@ -10,7 +10,7 @@ EmClassProject::Application.routes.draw do
   resources :lunchtrucks
 
   #routes to explanations
-  get '/fortune' => 'homepage#fortune', :as => 'fortune_explanation'
+  get '/what_i_learned' => 'homepage#what_i_learned', :as => 'what_i_learned_explanation'
 
   # routes to soure code
   match '/source/fortune.rb' => 'source#fortune', :as => 'fortune_source'
