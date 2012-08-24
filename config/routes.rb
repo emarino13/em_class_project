@@ -9,6 +9,10 @@ EmClassProject::Application.routes.draw do
   resources :converters
   resources :lunchtrucks
 
+  #routes to explanations
+  get '/fortune' => 'homepage#fortune', :as => 'fortune_explanation'
+
+  # routes to soure code
   match '/source/fortune.rb' => 'source#fortune', :as => 'fortune_source'
   match '/source/beastie_boys.rb' => 'source#beastie_boys', :as =>'beastie_boys_source'
   match '/source/rock_paper_scissors.rb' => 'source#rps', :as =>'rps_source'
