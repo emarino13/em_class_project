@@ -4,7 +4,7 @@
   <%= image_tag "beastie-boys-2.jpg" %>
   </span>
 
-<form action="/searches/find_by_year" method="get">
+<form action= <%= find_by_year_path %> method="get">
   <h4>Search Beastie Boys albums by year:</h4>
   <input type="text" name="album_year"/>
 
@@ -25,7 +25,7 @@
 
 <h4>Or...</h4>
 
-<form action="/searches/find_by_name" method="get">
+<form action= <%= find_by_name_path %> method="get">
   <h4>Search album name to find out the year released:</h4>
   <input type="text" name="album_name"/>
   <input type="submit" name="submit" value="Search"/>

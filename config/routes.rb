@@ -1,6 +1,9 @@
 EmClassProject::Application.routes.draw do
   root(:to => 'homepage#index')
 
+  get 'albums/find_by_year' => 'albums#find_by_year', :as => 'find_by_year'
+  get 'albums/find_by_name' => 'albums#find_by_name', :as => 'find_by_name'
+
   resources :albums
   resources :rpses
   resources :converters
@@ -10,6 +13,8 @@ EmClassProject::Application.routes.draw do
   match '/source/beastie_boys.rb' => 'source#beastie_boys', :as =>'beastie_boys_source'
   match '/source/rock_paper_scissors.rb' => 'source#rps', :as =>'rps_source'
   match '/source/converter.rb' => 'source#converter', :as => 'converter_source'
+
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
