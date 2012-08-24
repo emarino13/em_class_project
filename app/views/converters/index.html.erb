@@ -3,7 +3,7 @@
 <html>
   <body>
 
-    <form action="/converters/1" method="get">
+    <form action= <%= celsius_path %> method="get">
       <h2>Converting Temperatures Made Easy</h2>
 
       <SELECT name="celsius">
@@ -11,8 +11,8 @@
         <OPTION value="fahrenheit">fahrenheit</OPTION>
       </SELECT>
 
-      <input type="integer" name="q"/>
-      <input type="submit" name="submit" value="convert!"/>
+      <input type="integer" name="farhenheit"/>
+      <input type="submit" name="submit" value="Convert!"/>
 
     </form>
   </body>

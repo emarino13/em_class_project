@@ -7,7 +7,8 @@ EmClassProject::Application.routes.draw do
   resources :albums
   resources :rpses
 
-  get 'converter/celsius' => 'converter#celsius', :as => 'celsius'
+  get 'converters/celsius' => 'converters#celsius', :as => 'celsius'
+
   resources :converters
   resources :lunchtrucks
 
