@@ -12,6 +12,7 @@ class FortunesController < ApplicationController
                 "Try again tomorrow.",
                ]
     @output = @fortune[rand(@fortune.size)]
+    render :index
   end
 
 end
