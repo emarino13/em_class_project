@@ -7,10 +7,14 @@ EmClassProject::Application.routes.draw do
   resources :albums
   resources :rpses
 
-  get 'converters/celsius' => 'converters#celsius', :as => 'celsius'
-  get 'converters/fahrenheit' => 'converters#fahrenheit', :as => 'fahrenheit'
+  #get 'converters/celsius' => 'converters#celsius', :as => 'celsius'
+  #get 'converters/fahrenheit' => 'converters#fahrenheit', :as => 'fahrenheit'
 
-  resources :converters
+  resources :converters, :only => [:index] do
+    collection do
+      post :convert
+    end
+  end
   resources :lunchtrucks
 
   get 'fortunes/fortune_code' => 'fortunes#fortune_code', :as => 'fortune_code'

@@ -1,24 +1,32 @@
 class ConvertersController < ApplicationController
 
   def index
-    @conversion = []
-    @degrees = []
+    #@celsius = []
+    #@fahrenheit = []
   end
 
-  #converting from Celsius to Fahrenheit
-  def celsius
-    c = params[:celsius].to_f
+  def convert
+    if params[:unit] == "celsius" 
+      celsius_to_fahrenheit
+    else
+      fahrenheit_to_celsius
+    end
+    render :index
+  end
+
+  private
+
+  def celsius_to_fahrenheit
+    c = params[:temperature].to_f
     f = (c*9/5)+ 32.0
-    @conversion = f
-    render :index
+    @fahrenheit = f
   end
 
-  #converting from Fahrenheit to Celsius
-  def fahrenheit
-    f = params[:fahrenheit].to_f
+
+  def fahrenheit_to_celsius
+    f = params[:temperature].to_f
     c = (f-32.0) * 5/9
-    @degrees = c
-    render :index
+    @celsius = c
   end
 
 end
