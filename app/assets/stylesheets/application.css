@@ -19,8 +19,34 @@
 
 .temperature {
 	margin-left: 10px !important;
+	margin-top: 20px !important;
 }
 
 .buffer {
 	margin-top: 10px !important;
+}
+
+.button {
+	height: 50px;
+	width: 50px;
+}
+
+.buffer2 {
+	margin-left: 100px !important;
+	height: 379px;
+	width: 298px;
+
+}
+
+.bold {
+	font: bold;
+}
+
+.fahrenheit {
+	margin-left: 100px !important
+}
+
+.comida {
+	height: 333px;
+	width: 620px;
 }

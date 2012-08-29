@@ -2,7 +2,7 @@
 <h2> Your home for finding the best moving lunch! </h2>
 
 <span class="image">
-  <%= image_tag "Comida.jpg" %>
+  <%= image_tag "Comida.jpg", :class => "comida" %>
   </span>
 
 <form action ="/lunchtrucks" method="post">
@@ -18,6 +18,6 @@
 <input type ="submit" name ="submit" value="Search"/>
 </form>
 
-<p><b> Your current location:</b> <%= params[:location] %></p>
+<p><b> Your current latitude and longitude:</b> <%= params[:location] %></p>
 <p><b>Latitude:</b> <%=@latitude%></p>
 <p><b>Longitude:</b> <%=@longitude%></p>

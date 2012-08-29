@@ -5,18 +5,20 @@
     <h2>Converting Temperatures Made Easy</h2>
 
     <span class="image">
-      <%= image_tag "celsius.jpg", :class => 'celsius icon' %>
-      <%= image_tag "fahrenheit.jpg", :class => 'fahrenheit icon' %>
+      <%= image_tag "celsius.jpg", :class => 'celsius icon' %> 
+      Celsius
+      <%= image_tag "fahrenheit.jpg", :class => 'fahrenheit icon' %> 
+      Fahrenheit
     </span>
 
     <form action= <%= convert_converters_path %> method="post">
-      <SELECT name="unit" class="buffer">
+      <SELECT name="unit" class="temperature">
         <OPTION value="celsius">celsius</OPTION>
         <OPTION value="fahrenheit">fahrenheit</OPTION>
       </SELECT>
 
       <input type="text" name="temperature" class="temperature"/>
-      <input type="submit" name="submit" value="Convert!"/>
+      <input type="submit" name="submit" value="Convert!" class="temperature"/>
 
       <% if @fahrenheit.present? then %>
         <p> <%= @fahrenheit %> degrees fahrenheit.</p>

@@ -32,6 +32,7 @@ EmClassProject::Application.routes.draw do
   get '/source/beastie_boys.rb' => 'source#beastie_boys', :as =>'beastie_boys_source'
   get '/source/rock_paper_scissors.rb' => 'source#rps', :as =>'rps_source'
   get '/source/converter.rb' => 'source#converter', :as => 'converter_source'
+  get '/source/test_converter.rb' => 'source#test_converter', :as => 'test_converter_source'
 
 
 
