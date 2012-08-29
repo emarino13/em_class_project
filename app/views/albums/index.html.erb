@@ -1,7 +1,7 @@
-<h2>Beastie Boys Discography -- Hell to the yeah!</h2>
+<h2>Beastie Boys Discography</h2>
 
 <span class="image">
-  <%= image_tag "beastie-boys-2.jpg" %>
+  <%= image_tag "BeastieBoys.jpg", :class => 'boys' %>
   </span>
 
 <form action= <%= find_by_year_path %> method="get">
@@ -10,8 +10,6 @@
 
   <input type="submit" name="submit" value="Search"/>
 </form>
-
- <p>You searched for Beastie Boys albums in <%= @album_year%>.</p>
 
 <% if params[:album_year].present? then %>
   <% @albums.each do |album|%>

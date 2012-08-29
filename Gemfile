@@ -5,9 +5,10 @@ gem 'rails', '3.2.6'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem ('pg')
-gem ('coderay')
+gem 'pg'
+gem 'coderay'
 gem 'google-geo', '~> 2.3'
+gem 'heroku'
 
 
 
